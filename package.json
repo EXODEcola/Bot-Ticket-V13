@@ -1,0 +1,21 @@
+{
+  "name": "ticket-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oofy#2018",
+  "license": "Apache License 2.0",
+  "homepage": "https://github.com/BlackKnight683",
+  "dependencies": {
+    "@discordjs/builders": "0.6.0",
+    "@discordjs/rest": "0.1.0-canary.0",
+    "canvas": "2.9.3",
+    "discord-api-types": "0.24.0",
+    "discord-logs": "2.0.1",
+    "discord.js": "13.10.3",
+    "pastebin-api": "5.1.3"
+  }
+}
