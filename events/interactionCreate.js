@@ -38,9 +38,9 @@ module.exports = {
 
         const embed = new client.discord.MessageEmbed()
           .setColor('ff9600')
-          .setAuthor('Raison', ' ')
+          .setAuthor('Raison')
           .setDescription('choisissez une raison pour laquelle vous ouvrez un ticket')
-          .setFooter('Ticket System', ' ')
+          .setFooter('Ticket System')
           .setTimestamp();
 
         const row = new client.discord.MessageActionRow()
@@ -93,9 +93,9 @@ module.exports = {
               msg.delete().then(async () => {
                 const embed = new client.discord.MessageEmbed()
                   .setColor('ff9600')
-                  .setAuthor('Ticket', ' ')
+                  .setAuthor('Ticket')
                   .setDescription(`<@!${interaction.user.id}> a crée un **Ticket** avec la raison・ ${i.values[0]}`)
-                  .setFooter('Ticket System', ' ')
+                  .setFooter('Ticket System')
                   .setTimestamp();
 
                 const row = new client.discord.MessageActionRow()
@@ -213,9 +213,9 @@ module.exports = {
             .then(async () => {
               const embed = new client.discord.MessageEmbed()
                 .setColor('ff9600')
-                .setAuthor('Ticket', ' ')
+                .setAuthor('Ticket')
                 .setDescription('```Ticket Sauvegarder```')
-                .setFooter('Ticket System', ' ')
+                .setFooter('Ticket System')
                 .setTimestamp();
 
               const row = new client.discord.MessageActionRow()
@@ -276,13 +276,13 @@ module.exports = {
           publicity: 1,
         })
         const embed = new client.discord.MessageEmbed()
-          .setAuthor('Logs Ticket', ' ')
+          .setAuthor('Logs Ticket')
           .setDescription(`📰 Ticket-Logs \`${chan.id}\` créé par <@!${chan.topic}> et supprimer par <@!${interaction.user.id}>\n\nLogs: [**Cliquez ici pour voir les logs**](${urlToPaste})`)
           .setColor('2f3136')
           .setTimestamp();
 
         const embed2 = new client.discord.MessageEmbed()
-          .setAuthor('Logs Ticket', ' ')
+          .setAuthor('Logs Ticket')
           .setDescription(`📰 Backup de votre Ticket \`${chan.id}\`: [**Cliquez ici pour voir les logs**](${urlToPaste})`)
           .setColor('2f3136')
           .setTimestamp();
