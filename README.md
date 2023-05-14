@@ -1,36 +1,38 @@
-# Bot-Ticket-V13
-Un Bot Ticket avec choix de cathégorie complet
-
-#########################################
-
-ouvrez le config.json puis remplissez ces info
+Ouvrir le fichier Token.js remplassez
 
 {
-  "clientId": "ID de votre Bot",
+  "token": "Votre Token de BotDiscord"
+}
+
+Ouvrir le fichier config.js remplassez :
+
+{
+  "clientId": "Id de votre Bot",
 
 
-  "parentOpened": "ID de la Cathégorie ouverture du Ticket",
-  "parentApply": "ID de la Cathégorie ouverture du Ticket",
-  "parentSupport": "ID de la Cathégorie ouverture du Ticket",
-  "parentComplaint": "ID de la Cathégorie ouverture du Ticket",
-  "parentPartnership": "ID de la Cathégorie ouverture du Ticket",
-  "parentHosting": "ID de la Cathégorie ouverture du Ticket",
+  "parentOpened": "Cathégorie des Tickets",
+  "parentApply": "Cathégorie des Tickets",
+  "parentSupport": "Cathégorie des Tickets",
+  "parentComplaint": "Cathégorie des Tickets",
+  "parentPartnership": "Cathégorie des Tickets",
+  "parentHosting": "Cathégorie des Tickets",
 
-  "roleSupport": "ID du role support",
+  "roleSupport": "Votre Role Support",
 
   
-  "logsTicket": "ID des logs Ticket",
-  "ticketChannel": "ID du canal du Tickt",
+  "logsTicket": "les Logs des Tickets",
+  "ticketChannel": "Salon du Ticket",
 
   "footerText": "contributeurs @EXODEcola ✪#7410 et @[+] EXODE PROTECT"
 }
 
-ouvrez le token.json puis remplissez ces info
+Vérifier votre versions nodejs quel sois bien en V16.18.1 
+Si Non : https://nodejs.org/dist/v16.18.1/win-x64/node.exe
 
-{
-  "token": "Token de votre Bot"
-}
+Mettez le dossier: "node_module" (le décompréssez)
 
-#########################################
+Puis ensuite la commande node index et profité de votre BOT ^^
 
-Discord d'aide : https://discord.gg/88t9j4DSye
+PROTECTED BY EXODE DEV
+Discord : https://discord.gg/88t9j4DSye
+Discord : https://discord.gg/tstMQSxQwU

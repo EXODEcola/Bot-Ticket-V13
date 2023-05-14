@@ -76,4 +76,40 @@ client.on('interactionCreate', async interaction => {
 });
 
 
+
+const fetch = require('node-fetch');
+
+
+const API_KEY = 'ptla_kDEUFZnibOphF2aDGyUeHCFD8Y9cBMisxrpX9BTLcch';
+const NODE_ID = 'a453cfd7-3a30-4045-b10d-6d0fe2357485'; // Remplacez par l'ID de votre node
+
+client.on('messageCreate', async message => {
+  if (message.content === '!status') {
+    const url = `https://panel.exode-hebergement.fr/api/application/nodes/${NODE_ID}/utilization`;
+    const options = {
+      headers: {
+        'Authorization': `Bearer ${API_KEY}`,
+        'Content-Type': 'application/json',
+        'Accept': 'Application/vnd.pterodactyl.v1+json'
+      },
+      method: 'GET'
+    };
+    try {
+      const response = await fetch(url, options);
+      const data = await response.json();
+      if (!data.attributes) {
+        message.channel.send('Impossible de récupérer les informations de la node.');
+        return;
+      }
+      const cpu = data.attributes.cpu_absolute ? data.attributes.cpu_absolute.toFixed(2) : 'indisponible';
+      const ram = (data.attributes.memory_bytes / 1024 / 1024 / 1024).toFixed(2);
+      message.channel.send(`La node est en ligne et utilise ${cpu}% CPU et ${ram} Go de RAM.`);
+    } catch (error) {
+      console.error(error);
+      message.channel.send('Erreur lors de la récupération des informations de la node.');
+    }
+  }
+});
+
+
 client.login(require('./token.json').token);
