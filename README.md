@@ -31,6 +31,10 @@ ouvrez le token.json puis remplissez ces info
   "token": "Token de votre Bot"
 }
 
+Vérifier votre versions nodejs quel sois bien en V16.18.1 Si Non : https://nodejs.org/dist/v16.18.1/node-v16.18.1-x64.msi
+
+faite ensuite la commande : "npm install"
+
 #########################################
 
 Discord d'aide : https://discord.gg/88t9j4DSye
